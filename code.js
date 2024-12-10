@@ -1,5 +1,6 @@
 const container= document.querySelector(".container")
-    let num=16
+    let num=16,maxicolor=450;
+    let opacity=10;
     const btn = document.querySelector("#btn")
     createGrid(num)
     btn.addEventListener("click",()=>{
@@ -20,7 +21,10 @@ const container= document.querySelector(".container")
                 cells.className = "cells"
                 cells.id = "cell"+j
                 cells.addEventListener("mouseenter",()=>{
-                    cells.style.backgroundColor="red"
+                    cells.style.backgroundColor="rgb("+Math.floor(Math.random()*maxicolor)+","+ Math.floor(Math.random()*maxicolor)+","+ Math.floor(Math.random()*maxicolor)+")"
+                    cells.style.opacity = opacity+"%";
+                    opacity+=10;
+                    maxicolor-=5
                 })
             }
             columns.id = "column"+i

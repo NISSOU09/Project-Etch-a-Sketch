@@ -29,7 +29,3 @@ html, body {
     box-sizing: border-box; /* Ensures borders don't affect size */
     transition: background-color 0.5s ease;
 }
-
-.cells:hover{
-    background-color: blue;
-}
