@@ -7,13 +7,15 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #212121;
 }
 .container {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of columns when necessary */
     height: 90%; 
     width: 90%; 
-    border: solid black 2px;
+    border: 3px ridge #149CEA;
+    box-shadow: inset 0px 0px 25px #1479EA;
     box-sizing: border-box; /* Ensures borders don't affect dimensions */
 }
 
@@ -29,3 +31,52 @@ html, body {
     box-sizing: border-box; /* Ensures borders don't affect size */
     transition: background-color 0.5s ease;
 }
+
+/* From Uiverse.io by Navarog21 */ 
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+  }
+  
+  button:hover::before, button:hover::after {
+    transform: scale(0)
+  }
+  
+  button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }

@@ -1,6 +1,5 @@
 const container= document.querySelector(".container")
-    let num=16,maxicolor=450;
-    let opacity=10;
+    let num=16;
     const btn = document.querySelector("#btn")
     createGrid(num)
     btn.addEventListener("click",()=>{
@@ -11,6 +10,8 @@ const container= document.querySelector(".container")
     })
     function createGrid(number){
         container.innerHTML = "";
+        let opacity=10;
+        maxicolor=450;
         for(let i=1;i<=num;i++){
                 const columns = document.createElement("div")
                 columns.className = "columns"
