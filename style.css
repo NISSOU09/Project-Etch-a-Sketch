@@ -7,13 +7,13 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #212121;
+    background-color: white;
 }
 .container {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of columns when necessary */
-    height: 90%; 
-    width: 90%; 
+    height: 450px; 
+    width: 450px; 
     border: 3px ridge #149CEA;
     box-shadow: inset 0px 0px 25px #1479EA;
     box-sizing: border-box; /* Ensures borders don't affect dimensions */
